@@ -1,0 +1,168 @@
+call plug#begin('~/.vim/plugged')
+ Plug 'junegunn/fzf', { 'do' : { -> fzf#install() }}
+ Plug 'junegunn/fzf.vim'
+ Plug 'rhysd/vim-clang-format'
+ Plug 'scrooloose/nerdtree'
+ "Plug 'Mofiqul/dracula.nvim'
+ Plug 'morhetz/gruvbox'
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
+ Plug 'lambdalisue/battery.vim'
+ Plug 'preservim/nerdcommenter'
+ Plug 'mhinz/vim-startify'
+ Plug 'antoinemadec/FixCursorHold.nvim'
+ "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'cdelledonne/vim-cmake'
+ Plug 'voldikss/vim-floaterm'
+ Plug 'ryanoasis/vim-devicons'
+ Plug 'neovim/nvim-lspconfig'
+ " main one
+ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+ " 9000+ Snippets
+ Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
+ " lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
+ " Need to **configure separately**
+
+ Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+ " - shell repl
+ " - nvim lua api
+ " - scientific calculator
+ " - comment banner
+ " - etc
+call plug#end()
+
+set number
+syntax on
+colorscheme gruvbox
+set termguicolors
+
+"Airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#battery#enabled = 1
+
+"Floaterm
+let g:floaterm_keymap_new = '<Leader>ft'
+let g:floaterm_keymap_toggle = '<Leader>t'
+let g:floaterm_position = 'bottom'
+let g:floaterm_width = 1.0
+let g:floaterm_height = 0.6
+
+"cmake
+let g:cmake_link_compile_commands = 1
+nmap <leader>cg :CMakeGenerate<cr>
+nmap <leader>b :CMakeBuild<cr>
+nmap <leader>tr :CMakeSwitch Release<cr>
+nmap <leader>td :CMakeSwitch Debug<cr>
+
+"switching windows faster
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+"kj exit to normal mode
+inoremap kj <esc>
+
+"clang-format configuration
+let g:clang_format#style_options = {
+    \ "AccessModifierOffset" : -4,
+    \ "AllowShortIfStatementsOnASingleLine" : "true",
+    \ "AlwaysBreakTemplateDeclarations" : "true",
+    \ "Standard" : "C++11"}
+
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,h,hpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,h,hpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" Toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+
+"NERDtree
+nnoremap <C-t> :NERDTreeToggle<CR>
+
+" Save on Ctrl-S
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
+
+"fzf config
+nnoremap <C-p> :Files<Cr>
+let g:fzf_layout = { 'down' : '40%' }
+
+"tabs as 4 spaces
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+"startify config
+let g:startify_bookmarks = [
+  \ { 'z': '~/.zshrc' },
+  \ { 'v': '~/.config/nvim/init.vim' },
+  \ { 'x': '~/.Xresources'},
+  \ ]
+
+let g:startify_custom_header = [
+	\ '________                               ',
+	\ '\______ \____________     ____   ____  ',
+	\ ' |    |  \_  __ \__  \   / ___\ /  _ \ ',
+	\ ' |    `   \  | \// __ \_/ /_/  >  <_> )',
+	\ '/_______  /__|  (____  /\___  / \____/ ',
+	\ '        \/           \//_____/         '
+	\]
+
+let g:startify_lists = [
+      \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
+      \ { 'header': ['   MRU'],            'type': 'files' },
+      \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
+      \ ]
+
+lua << EOF
+local nvim_lsp = require'lspconfig'
+
+vim.g.coq_settings = { auto_start = 'shut-up' }
+
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  -- Enable completion triggered by <c-x><c-o>
+  --buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  local opts = { noremap=true, silent=true }
+
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  --buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+  buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+  buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+  buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+end
+
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup(require('coq').lsp_ensure_capabilities({
+    on_attach = on_attach,
+  }))
+end
+EOF
