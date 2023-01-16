@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/cyber_girl.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0D0914",
+        "foreground": "#b0bbe0",
+        "cursor": "#b0bbe0"
+    },
+    "colors": {
+        "color0": "#0D0914",
+        "color1": "#4D4B68",
+        "color2": "#942068",
+        "color3": "#272F97",
+        "color4": "#5842AE",
+        "color5": "#5B5BA3",
+        "color6": "#A72BC8",
+        "color7": "#b0bbe0",
+        "color8": "#7b829c",
+        "color9": "#4D4B68",
+        "color10": "#942068",
+        "color11": "#272F97",
+        "color12": "#5842AE",
+        "color13": "#5B5BA3",
+        "color14": "#A72BC8",
+        "color15": "#b0bbe0"
+    }
+}

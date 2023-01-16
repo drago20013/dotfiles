@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/moon-upside.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#072134",
+        "foreground": "#cef3f6",
+        "cursor": "#cef3f6"
+    },
+    "colors": {
+        "color0": "#072134",
+        "color1": "#08A5D2",
+        "color2": "#58AECD",
+        "color3": "#1FCEF8",
+        "color4": "#63E9FD",
+        "color5": "#86B8CC",
+        "color6": "#8FF6FE",
+        "color7": "#cef3f6",
+        "color8": "#90aaac",
+        "color9": "#08A5D2",
+        "color10": "#58AECD",
+        "color11": "#1FCEF8",
+        "color12": "#63E9FD",
+        "color13": "#86B8CC",
+        "color14": "#8FF6FE",
+        "color15": "#cef3f6"
+    }
+}

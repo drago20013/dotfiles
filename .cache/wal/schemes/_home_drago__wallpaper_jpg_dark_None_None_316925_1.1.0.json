@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/.wallpaper.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#070817",
+        "foreground": "#c8cecc",
+        "cursor": "#c8cecc"
+    },
+    "colors": {
+        "color0": "#070817",
+        "color1": "#525465",
+        "color2": "#968662",
+        "color3": "#345F8D",
+        "color4": "#50709E",
+        "color5": "#5E8AB0",
+        "color6": "#67A0C6",
+        "color7": "#c8cecc",
+        "color8": "#8c908e",
+        "color9": "#525465",
+        "color10": "#968662",
+        "color11": "#345F8D",
+        "color12": "#50709E",
+        "color13": "#5E8AB0",
+        "color14": "#67A0C6",
+        "color15": "#c8cecc"
+    }
+}

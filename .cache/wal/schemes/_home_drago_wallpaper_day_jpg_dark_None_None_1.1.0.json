@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpaper/day.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#191d21",
+        "foreground": "#c8d3e2",
+        "cursor": "#c8d3e2"
+    },
+    "colors": {
+        "color0": "#191d21",
+        "color1": "#5C738B",
+        "color2": "#6D8AA5",
+        "color3": "#4B9ED7",
+        "color4": "#A49F9C",
+        "color5": "#CEB4A6",
+        "color6": "#DFC8B4",
+        "color7": "#c8d3e2",
+        "color8": "#8c939e",
+        "color9": "#5C738B",
+        "color10": "#6D8AA5",
+        "color11": "#4B9ED7",
+        "color12": "#A49F9C",
+        "color13": "#CEB4A6",
+        "color14": "#DFC8B4",
+        "color15": "#c8d3e2"
+    }
+}

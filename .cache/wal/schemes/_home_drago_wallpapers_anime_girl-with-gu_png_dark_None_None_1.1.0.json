@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/girl-with-gu.png",
+    "alpha": "100",
+    "special": {
+        "background": "#101013",
+        "foreground": "#dfd5cf",
+        "cursor": "#dfd5cf"
+    },
+    "colors": {
+        "color0": "#101013",
+        "color1": "#87787A",
+        "color2": "#BD9B72",
+        "color3": "#656C91",
+        "color4": "#8B7E84",
+        "color5": "#968687",
+        "color6": "#AC9D9D",
+        "color7": "#dfd5cf",
+        "color8": "#9c9590",
+        "color9": "#87787A",
+        "color10": "#BD9B72",
+        "color11": "#656C91",
+        "color12": "#8B7E84",
+        "color13": "#968687",
+        "color14": "#AC9D9D",
+        "color15": "#dfd5cf"
+    }
+}

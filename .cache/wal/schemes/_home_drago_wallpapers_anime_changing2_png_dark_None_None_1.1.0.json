@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/changing2.png",
+    "alpha": "100",
+    "special": {
+        "background": "#180f18",
+        "foreground": "#e9e2e6",
+        "cursor": "#e9e2e6"
+    },
+    "colors": {
+        "color0": "#180f18",
+        "color1": "#D26F8C",
+        "color2": "#30CED3",
+        "color3": "#B68C8E",
+        "color4": "#D99DAC",
+        "color5": "#FFEC8F",
+        "color6": "#9CFCF9",
+        "color7": "#e9e2e6",
+        "color8": "#a39ea1",
+        "color9": "#D26F8C",
+        "color10": "#30CED3",
+        "color11": "#B68C8E",
+        "color12": "#D99DAC",
+        "color13": "#FFEC8F",
+        "color14": "#9CFCF9",
+        "color15": "#e9e2e6"
+    }
+}

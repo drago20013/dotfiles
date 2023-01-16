@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/purple-two-swords.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#030102",
+        "foreground": "#d7c4c3",
+        "cursor": "#d7c4c3"
+    },
+    "colors": {
+        "color0": "#030102",
+        "color1": "#473846",
+        "color2": "#9A4551",
+        "color3": "#8F537E",
+        "color4": "#AF29A5",
+        "color5": "#CE2AAA",
+        "color6": "#DD3FCD",
+        "color7": "#d7c4c3",
+        "color8": "#968988",
+        "color9": "#473846",
+        "color10": "#9A4551",
+        "color11": "#8F537E",
+        "color12": "#AF29A5",
+        "color13": "#CE2AAA",
+        "color14": "#DD3FCD",
+        "color15": "#d7c4c3"
+    }
+}

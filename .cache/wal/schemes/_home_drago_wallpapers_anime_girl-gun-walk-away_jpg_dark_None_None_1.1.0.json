@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/girl-gun-walk-away.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#000000",
+        "foreground": "#c6bfc4",
+        "cursor": "#c6bfc4"
+    },
+    "colors": {
+        "color0": "#000000",
+        "color1": "#5B5566",
+        "color2": "#9C6370",
+        "color3": "#395988",
+        "color4": "#747189",
+        "color5": "#887A8A",
+        "color6": "#C37A84",
+        "color7": "#c6bfc4",
+        "color8": "#8a8589",
+        "color9": "#5B5566",
+        "color10": "#9C6370",
+        "color11": "#395988",
+        "color12": "#747189",
+        "color13": "#887A8A",
+        "color14": "#C37A84",
+        "color15": "#c6bfc4"
+    }
+}

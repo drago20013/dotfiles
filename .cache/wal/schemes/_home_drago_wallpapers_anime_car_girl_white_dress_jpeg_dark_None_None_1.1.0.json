@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/car_girl_white_dress.jpeg",
+    "alpha": "100",
+    "special": {
+        "background": "#181616",
+        "foreground": "#e4e4e1",
+        "cursor": "#e4e4e1"
+    },
+    "colors": {
+        "color0": "#181616",
+        "color1": "#707588",
+        "color2": "#8B7B84",
+        "color3": "#768D94",
+        "color4": "#A09B9B",
+        "color5": "#CAB3A8",
+        "color6": "#C3C9BD",
+        "color7": "#e4e4e1",
+        "color8": "#9f9f9d",
+        "color9": "#707588",
+        "color10": "#8B7B84",
+        "color11": "#768D94",
+        "color12": "#A09B9B",
+        "color13": "#CAB3A8",
+        "color14": "#C3C9BD",
+        "color15": "#e4e4e1"
+    }
+}

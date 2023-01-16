@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/in-front-of-car.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0f0f0f",
+        "foreground": "#e1e4ed",
+        "cursor": "#e1e4ed"
+    },
+    "colors": {
+        "color0": "#0f0f0f",
+        "color1": "#5B88B7",
+        "color2": "#6C9FD0",
+        "color3": "#A29CA2",
+        "color4": "#D8C3A7",
+        "color5": "#8FB8E1",
+        "color6": "#AACBF2",
+        "color7": "#e1e4ed",
+        "color8": "#9d9fa5",
+        "color9": "#5B88B7",
+        "color10": "#6C9FD0",
+        "color11": "#A29CA2",
+        "color12": "#D8C3A7",
+        "color13": "#8FB8E1",
+        "color14": "#AACBF2",
+        "color15": "#e1e4ed"
+    }
+}

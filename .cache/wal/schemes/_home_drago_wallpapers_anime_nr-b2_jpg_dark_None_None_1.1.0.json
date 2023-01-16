@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/drago/wallpapers/anime/nr-b2.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#101419",
+        "foreground": "#e1e1e3",
+        "cursor": "#e1e1e3"
+    },
+    "colors": {
+        "color0": "#101419",
+        "color1": "#636571",
+        "color2": "#3F6580",
+        "color3": "#6A7488",
+        "color4": "#897C84",
+        "color5": "#9896A3",
+        "color6": "#C5BBB9",
+        "color7": "#e1e1e3",
+        "color8": "#9d9d9e",
+        "color9": "#636571",
+        "color10": "#3F6580",
+        "color11": "#6A7488",
+        "color12": "#897C84",
+        "color13": "#9896A3",
+        "color14": "#C5BBB9",
+        "color15": "#e1e1e3"
+    }
+}

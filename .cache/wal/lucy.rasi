@@ -1,0 +1,61 @@
+// vim: syntax=css
+/* ---
+  Lucy's Dotfiles
+  https://github.com/lucyy-mc/dotfiles-new
+  Rofi theme file
+--- */
+
+* {
+	background-color: transparent;
+	accent-color: #160814;
+	color: #e6e6e6;
+	font: "Jetbrains Mono 10";
+}
+
+element-text selected {
+	color: @accent-color;
+}
+
+mainbox {
+	orientation: horizontal;
+}
+
+listview {
+	layout: horizontal;
+}
+
+prompt {
+	color: #694B98;
+}
+
+entry {
+	width: 100px;
+	color: #694B98;
+	height: 100%;
+}
+
+element {
+	padding: 5 5;
+
+}
+
+inputbar {
+	background-color: @accent-color;
+	color: #694B98;
+	border-radius: 5px;
+	padding: 5 0;
+}
+
+window {
+	background-color: #694B98D9;
+	width:300px;
+	location: north;
+	y-offset: 10px;
+	width: 800px;
+	height: 28px;
+}
+
+prompt {
+	padding:0 5;
+	height: 100%;
+}
