@@ -1,0 +1,85 @@
+! ---
+! Lucys Dotfiles
+! https://github.com/lucyy-mc/dotfiles-new
+! .Xresources
+! ---
+
+! special
+*.foreground:   #f7e6ff
+*.background:   #D9172035
+*.cursorColor:  #f7e6ff
+
+! black
+*.color0:       #45454d
+*.color8:       #797380
+
+! red
+*.color1:       #b35959
+*.color9:       #ff9999
+
+! green
+*.color2:       #59b386
+*.color10:      #99ffcc
+
+! yellow
+*.color3:       #cc8e5c
+*.color11:      #ffcc99
+
+! blue
+*.color4:       #5974b3
+*.color12:      #99b8ff
+
+! magenta
+*.color5:       #ab59b3
+*.color13:      #f799ff
+
+! cyan
+*.color6:       #59b3b3
+*.color14:      #99ffff
+
+! white
+*.color7:       #998a99
+*.color15:      #f7e6ff
+
+URxvt.font: \
+	xft:DejaVuSansMono Nerd Font:antialias=true:size=16:minspace=False, \
+	xft:DroidSansMono Nerd Font Mono:antialias=true:size=16, \
+	xft:FuraMono NF:size=16:antialias=true:minspace=False, \
+	xft:RobotoMono Nerd Font:antialias=true:size=16:minspace=False, \
+	xft:Noto Sans Mono:antialias=true:size=16:minspace=False, \
+	xft:Monospace:style=Medium:antialias=true:minspace=False
+
+URxvt.boldFont: \
+	xft:DejaVuSansMono Nerd Font:antialias=true:size=16:minspace=False, \
+	xft:DroidSansMono Nerd Font Mono:antialias=true:size=16, \
+	xft:FuraMono NF:size=16:antialias=true:minspace=False, \
+	xft:RobotoMono Nerd Font:antialias=true:size=16:minspace=False, \
+	xft:Noto Sans Mono:antialias=true:size=16:minspace=False, \
+	xft:Monospace:style=Medium:antialias=true:minspace=False
+
+URxvt.depth: 32
+URxvt.letterSpace: -1
+URxvt.cursorBlink: true
+URxvt.scrollBar: 	false
+URxvt.iso14755: 	false
+URxvt.iso14755_52:	false
+URxvt.internalBorder:  	5
+
+!##############
+!# Xft settings
+!##############
+
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt*background: #172035
+
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
+URxvt.geometry: 400x400
