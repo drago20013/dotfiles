@@ -1,0 +1,24 @@
+#!/bin/bash
+MORNING_THRESH=7
+EVENING_THRESH=16
+NIGHT_THRESH=21
+while true 
+do
+	HOUR=$(date +%k)
+	if (( $HOUR >= $MORNING_THRESH )) && (( $HOUR <= $EVENING_THRESH ));
+	then
+		WALLPAPER="day"
+
+	elif (( $HOUR > $EVENING_THRESH )) && (( $HOUR <= $NIGHT_THRESH ));
+	then
+		WALLPAPER="evening"
+
+	else
+		WALLPAPER="night"
+
+	fi
+
+	printf "Setting wallpaper to %s" $WALLPAPER
+	wal -i ~/wallpaper/$WALLPAPER.jpg
+	sleep 900
+done

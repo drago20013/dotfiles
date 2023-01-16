@@ -1,0 +1,18 @@
+#!/bin/sh
+while [ true ]; do 
+battery_level=`cat /sys/class/power_supply/BAT0/capacity`
+isCharging=`cat /sys/class/power_supply/ADP1/online`
+if [ $isCharging -eq 0 ]
+then
+if [ $battery_level -le 25 ];
+then
+	notify-send "Battery low" "Battery level is ${battery_level}%!"
+fi
+
+if [ $battery_level -le 10 ]
+then
+	systemctl hibernate
+fi
+fi
+sleep 120
+done
