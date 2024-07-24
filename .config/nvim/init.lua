@@ -1,1 +1,2 @@
-require("drago")
+-- require("drago")
+require("config.lazy")
